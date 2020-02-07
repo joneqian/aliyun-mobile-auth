@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/joneqian/aliyun-mobile-auth/issues"
   },
-  "homepage": "https://github.com/joneqian/aliyun-mobile-auth#readme"
+  "homepage": "https://github.com/joneqian/aliyun-mobile-auth#readme",
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.9",
+    "commitizen": "^4.0.3"
+  }
 }
