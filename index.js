@@ -39,4 +39,5 @@ module.exports = function(config) {
       throw new Error(e.message);
     }
   };
+  return client;
 };
