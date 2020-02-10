@@ -22,18 +22,25 @@ module.exports = function(config) {
   };
 
   let client = {};
-  client.getMobile = async function() {
+  client.getMobile = async function({AccessToken}) {
     try {
-      let res = await core.request('GetMobile', params, requestOption);
+      let res = await core.request('GetMobile', {
+        RegionId: params.RegionId,
+        AccessToken
+      }, requestOption);
       return res; 
     } catch (e) {
       throw new Error(e.message);
     }
   };
 
-  client.verifyMobile = async function() {
+  client.verifyMobile = async function({AccessToken, PhoneNumber}) {
     try {
-      let res = await core.request('VerifyMobile', params, requestOption);
+      let res = await core.request('VerifyMobile', {
+        RegionId: params.RegionId,
+        AccessToken,
+        PhoneNumber
+      }, requestOption);
       return res; 
     } catch (e) {
       throw new Error(e.message);
