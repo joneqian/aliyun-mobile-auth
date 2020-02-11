@@ -34,11 +34,11 @@ module.exports = function(config) {
     }
   };
 
-  client.verifyMobile = async function({AccessToken, PhoneNumber}) {
+  client.verifyMobile = async function({AccessCode, PhoneNumber}) {
     try {
       let res = await core.request('VerifyMobile', {
         RegionId: params.RegionId,
-        AccessToken,
+        AccessCode,
         PhoneNumber
       }, requestOption);
       return res; 

@@ -56,7 +56,7 @@ client.getMobile({
 ## 本机号码校验认证
 ```js
 client.verifyMobile({
-  AccessToken: 'AccessToken', // app端SDK获取的登录token
+  AccessCode: 'AccessCode', // app端SDK获取accessCode参数值，即Token
   PhoneNumber: '13800000000' // 手机号
 });
 
